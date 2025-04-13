@@ -1,0 +1,21 @@
+.analytics-page {
+    padding: 20px;
+  }
+  
+  .controls {
+    margin-bottom: 20px;
+  }
+  
+  .controls label {
+    margin-right: 10px;
+  }
+  
+  .chart-container {
+    margin-bottom: 30px;
+  }
+  
+  .confusion-matrix,
+  .metrics-table {
+    margin-bottom: 20px;
+  }
+  

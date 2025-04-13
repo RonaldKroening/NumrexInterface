@@ -1,0 +1,65 @@
+.dataset-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .drop-zone {
+    width: 300px;
+    height: 200px;
+    border: 2px dashed #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .file-input-container {
+    margin-bottom: 20px;
+  }
+  
+  #fileInput {
+    display: none;
+  }
+  .dacon-cap{
+    color: black;
+    font-family: 'Avenir next', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    
+  }
+  label {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .file-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .dp-btn{
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    font-family: 'Avenir next',sans-serif;
+    font-weight: bold;
+  }
+  .dp-lbl{
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    font-family: 'Avenir next',sans-serif;
+    font-weight: bold;
+  }
+  .file-list li {
+    margin: 5px 0;
+  }
+  

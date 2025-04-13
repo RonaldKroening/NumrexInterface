@@ -1,0 +1,54 @@
+{
+    "models": [
+      {
+        "Model Type": "Classifier/Regressor",
+        "Name": "Random Forest",
+        "General Description": "An ensemble learning method that constructs multiple decision trees and merges them for improved accuracy and stability.",
+        "Methodology": "Uses bagging (Bootstrap Aggregating) to train multiple decision trees on different subsets of the data and aggregates their predictions by majority voting (classification) or averaging (regression).",
+        "Best Applications": "Tabular data, fraud detection, feature importance analysis, and medical diagnosis."
+      },
+      {
+        "Model Type": "Classifier",
+        "Name": "Logistic Regression",
+        "General Description": "A statistical model that applies a logistic function to model binary or multi-class classification problems.",
+        "Methodology": "Uses a sigmoid function to estimate probabilities, with coefficients optimized via Maximum Likelihood Estimation (MLE).",
+        "Best Applications": "Binary classification tasks, credit scoring, medical diagnosis, and spam detection."
+      },
+      {
+        "Model Type": "Regressor",
+        "Name": "Linear Regression",
+        "General Description": "A fundamental regression model that establishes a linear relationship between dependent and independent variables.",
+        "Methodology": "Minimizes the sum of squared residuals to determine the best-fit line for predicting continuous target variables.",
+        "Best Applications": "House price prediction, economic forecasting, and risk assessment."
+      },
+      {
+        "Model Type": "Classifier/Regressor",
+        "Name": "Support Vector Machine (SVM)",
+        "General Description": "A supervised learning model that uses a hyperplane to separate data points into different classes.",
+        "Methodology": "Finds the optimal hyperplane that maximizes the margin between different classes using kernel functions for non-linear data.",
+        "Best Applications": "Text classification, image recognition, and bioinformatics."
+      },
+      {
+        "Model Type": "Classifier/Regressor",
+        "Name": "Artificial Neural Network (ANN)",
+        "General Description": "A deep learning model inspired by the human brain, consisting of interconnected layers of neurons that process data.",
+        "Methodology": "Uses backpropagation and gradient descent to adjust weights in hidden layers to minimize loss.",
+        "Best Applications": "Image classification, speech recognition, and complex pattern recognition."
+      },
+      {
+        "Model Type": "Sequence Model",
+        "Name": "Long Short-Term Memory (LSTM)",
+        "General Description": "A type of recurrent neural network (RNN) designed to capture long-term dependencies in sequential data.",
+        "Methodology": "Uses specialized memory cells with gates to control the flow of information, reducing the vanishing gradient problem.",
+        "Best Applications": "Time series forecasting, natural language processing, and speech recognition."
+      },
+      {
+        "Model Type": "Sequence Model",
+        "Name": "Gated Recurrent Unit (GRU)",
+        "General Description": "A simplified version of LSTM that uses gating mechanisms to capture dependencies in sequential data.",
+        "Methodology": "Employs update and reset gates to regulate information flow and reduce computational complexity.",
+        "Best Applications": "Chatbots, stock price prediction, and machine translation."
+      }
+    ]
+  }
+  

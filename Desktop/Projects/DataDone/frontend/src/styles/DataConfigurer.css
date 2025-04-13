@@ -1,0 +1,326 @@
+/* Main Container Styling */
+.dataconfigurer {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input and Select Styling */
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.table-input {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-width: 100px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+.input-container label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.input-container select {
+  padding: 5px;
+  width: 200px;
+}
+
+/* Button Group Styling */
+.button-group {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.col-lab {
+  font-size: 16px;
+  color: black;
+  background-color: transparent;
+}
+
+#interpolateThreshold {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 0px;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+#interButton {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+
+
+/* Checkbox Container Styling */
+.checkbox-container {
+  margin-bottom: 20px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.inter-args {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px; /* Reduced gap for better spacing */
+}
+
+.cols-to-inter {
+  max-width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.checkbox-container h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.checkbox-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-item button {
+  padding: 6px 12px; /* Smaller padding */
+  font-size: 12px; /* Smaller font size */
+  cursor: pointer;
+  background-color: #f8f9fa;
+  color: #333;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  max-width: 80px; /* Max width for buttons */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+
+.checkbox-item button.selected {
+  color: white;
+  background-color: #083813;
+}
+
+.checkbox-item button:hover {
+  background-color: #e9ecef;
+}
+
+.checkbox-container button {
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #a3dfb1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.checkbox-container button:hover {
+  background-color: #a3dfb1;
+}
+
+.dacon-lbl{
+  background-color: #218838;
+  color: white;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Avenir next', sans-serif;
+}
+
+.dacon-btn{
+  background-color: #218838;
+  color: white;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Avenir next', sans-serif;
+}
+
+/* Interpolate Section Styling */
+.interpolate-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interpolate-container label {
+  font-size: 16px;
+}
+
+.interpolate-container input {
+  margin-left: 10px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.select-cl {
+  margin:0px;
+}
+
+.label-cl{
+  margin: 0px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  max-width: 100px;
+  overflow-x: scroll;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Interpolate Options Styling */
+.interpolate-options {
+  display: flex;
+  gap: 20px; /* Smaller gap for compact layout */
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 14px;
+}
+
+.interpolate-options .arg-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.interpolate-options label {
+  font-size: 16px; /* Smaller font size */
+}
+
+.interpolate-options select,
+.interpolate-options input {
+  font-size: 12px; /* Smaller font size */
+  width: 70%; /* Smaller width */
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Ensure the interpolate button and threshold input are aligned */
+.interpolate-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.interpolate-container input[type="range"] {
+  width: 100px;
+}
+
+.interpolate-container span {
+  font-size: 14px;
+}
+
+/* Style for the Select All button */
+.select-all-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #218838;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+
+/* Ensure the checkbox grid is scrollable and compact */
+.checkbox-grid {
+  height: 100px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+/* Style for checkbox items */
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.mod-but {
+  margin-top: 20px;
+}
+.table-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.scroll-view {
+  max-height: 500px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.caption{
+  color: black;
+  font-size: 20px;
+}
