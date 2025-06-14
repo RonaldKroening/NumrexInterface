@@ -114,11 +114,14 @@ function App() {
 
   }
   
-
   useEffect(() => {
-    fetch('/numrex_data.txt')
-      .then((res) => res.text())
+    fetch(process.env.PUBLIC_URL + '/numrex_data.txt')
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+        return res.text();
+      })
       .then((text) => {
+        console.log("Raw file content:", text);
         const lines = text.split(/\r?\n/);
         const numrexObj = {};
         let firstKey = "";
@@ -137,6 +140,8 @@ function App() {
 
           numrexObj[key] = values;
         }
+        console.log("Found ",Object.keys(numrexObj).length, " keys in numrex data."); 
+        console.log(numrexObj);
 
         setNumrex(numrexObj);
         setMax(localMax);
