@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/NumrexInterface/static/css/main.e46aa9c8.css",
-    "main.js": "/NumrexInterface/static/js/main.7da0ad61.js",
+    "main.js": "/NumrexInterface/static/js/main.51f950b6.js",
     "static/js/453.37200e1a.chunk.js": "/NumrexInterface/static/js/453.37200e1a.chunk.js",
     "static/media/logo.svg": "/NumrexInterface/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/NumrexInterface/index.html",
     "main.e46aa9c8.css.map": "/NumrexInterface/static/css/main.e46aa9c8.css.map",
-    "main.7da0ad61.js.map": "/NumrexInterface/static/js/main.7da0ad61.js.map",
+    "main.51f950b6.js.map": "/NumrexInterface/static/js/main.51f950b6.js.map",
     "453.37200e1a.chunk.js.map": "/NumrexInterface/static/js/453.37200e1a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e46aa9c8.css",
-    "static/js/main.7da0ad61.js"
+    "static/js/main.51f950b6.js"
   ]
 }
