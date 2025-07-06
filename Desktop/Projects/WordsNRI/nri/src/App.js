@@ -10,6 +10,7 @@ function App() {
   const [chosen_size, setChosenSize] = useState(0);
   const [chosen_word, setChosenWord] = useState([]);
   const [search_results, setSearchResults] = useState([]);
+  const [not_in, setNot] = useState([]);
 
   function update_position(index, value) {
     setPositions((prev) => ({
@@ -40,8 +41,22 @@ function App() {
     return ret;
   }
 
-  function valid_word(word) {
+  function valid_word(check_word,word) {
+    let char_map = {};
+    let pos_map = [];
+    for (let i in check_word){
+      if(check_word[i] == "*"){
+        pos_map.push(i);
+      }
+    }
+
     for (let i = 0; i < chosen_size; i++) {
+      let v = [];
+      if(check_word[i] in char_map){
+        v = char_map[check_word[i]];
+      }
+      v.push(i);
+      char_map[check_word[i]] = v
       if (positions[i] && positions[i] !== word[i]) {
         return false; 
       }
@@ -49,6 +64,13 @@ function App() {
     for (let char of present) {
       if (!word.includes(char)) {
         return false;
+      }
+    }
+    for (let char of not_in){
+      for (let position of pos_map){
+        if(word[position] == char){
+          return false;
+        }
       }
     }
     return true; 
@@ -76,9 +98,8 @@ function App() {
     return mapping;
   }
 
-  function valid_key(key) {
-    const check_word = chosen_word.map(char => (char == '' ? "*" : char));
-
+  function valid_key(check_word, key) {
+    
     if (key.length !== check_word.length) return false;
   
     const word_map = equality_mapping(check_word);
@@ -97,18 +118,22 @@ function App() {
 
   function search() {
     const seen = [];
+    const check_word = chosen_word.map(char => (char == '' ? "*" : char));
+
     let numrex_word = "";
-    var possible_numrex_keys = Object.keys(numrex).filter(key => (key.length === chosen_size) && valid_key(key));
+    var possible_numrex_keys = Object.keys(numrex).filter(key => (key.length === chosen_size) && valid_key(check_word, key));
     var results = [];
     for(let possible_key of possible_numrex_keys) {
       if (numrex[possible_key].length > 0) {
-        let options = numrex[possible_key].filter(word => valid_word(word));
+        let options = numrex[possible_key].filter(word => valid_word(check_word, word));
         if (options.length > 0) {
           results.push(...options);
         }
       }
     }
+
     if (results.length > 0) {
+      let res = list(set(results));
       setSearchResults(results);
     }
 
@@ -206,6 +231,25 @@ function App() {
                     setPresent([...present, char]);
                   } else {
                     setPresent(present.filter((c) => c !== char));
+                  }
+                }}
+              />
+              {char}
+            </label>
+          ))}
+        </div>
+        <h3>Enter Characters Not In Word</h3>
+        <div className="checkbox-list">
+          {"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map((char) => (
+            <label key={char} className="checkbox-item">
+              <input
+                type="checkbox"
+                checked={not_in.includes(char)}
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    setPresent([...not_in, char]);
+                  } else {
+                    setPresent(not_in.filter((c) => c !== char));
                   }
                 }}
               />
