@@ -73,6 +73,7 @@ function App() {
         }
       }
     }
+
     return true; 
   }
 
@@ -133,7 +134,8 @@ function App() {
     }
 
     if (results.length > 0) {
-      let res = list(set(results));
+      let res = [...new Set(results)];
+
       setSearchResults(results);
     }
 
